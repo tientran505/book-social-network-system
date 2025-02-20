@@ -22,7 +22,9 @@ import org.springframework.web.filter.CorsFilter;
 @EnableMethodSecurity
 public class SecurityConfig {
 
-    private final String[] PUBLIC_POST_ENDPOINTS = {};
+    private final String[] PUBLIC_POST_ENDPOINTS = {
+            "/internal/profiles"
+    };
 
     @Autowired
     private CustomJwtDecoder customJwtDecoder;
